@@ -6,6 +6,8 @@ import Label from 'cozy-ui/transpiled/react/Label'
 import Button from 'cozy-ui/transpiled/react/Button'
 
 import { TODOS_DOCTYPE } from '../../../doctypes'
+import { sendNotification } from 'cozy-notifications'
+import { MyNotificationView } from '../../../notifications/test-notif/index'
 
 export const TodoAdd = () => {
   const client = useClient()
@@ -14,6 +16,7 @@ export const TodoAdd = () => {
 
   const handleChange = event => {
     setTodoToAdd(event.target.value)
+    sendNotification(client, MyNotificationView)
   }
 
   const handleSubmit = async () => {

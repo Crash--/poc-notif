@@ -1,0 +1,18 @@
+{{#extend "app-layout"}}
+  {{#content "emailTitle"}}
+    A notification from My App !
+  {{/content}}
+
+  {{#content "emailSubtitle"}}
+    You should read this :)
+  {{/content}}
+
+  {{#content "content"}}
+    <mj-section>
+    {{ greeting name }},
+
+    Just to tell you that My App is awesome !
+    </mj-section>
+  {{/content}}
+
+{{/extend}}
